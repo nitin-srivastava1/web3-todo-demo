@@ -31,8 +31,6 @@ function App() {
 
     // getting all the tasks from smart contract storage to the component
     let taskCount = await contractInstance.methods.getTaskCount().call({ from: accounts[1] })
-    console.log("count : ", taskCount)
-
     let allTasks = []
 
     for (let i = 0n; i < taskCount; i++) {
@@ -42,10 +40,8 @@ function App() {
         title: currentTask.task
       })
     }
-    console.log("all tasks: ", allTasks)
-    setTasks(
-      [...tasks, ...allTasks]
-    )
+    
+    setTasks([...tasks, ...allTasks])
 
   }
 
@@ -66,7 +62,6 @@ function App() {
     let taskCount = await contract.methods.getTaskCount().call({ from: account })
 
     let newTask = await contract.methods.getTask(taskCount - 1n).call({ from: account })
-
 
     setTasks(
       [...tasks,
