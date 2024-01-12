@@ -1,0 +1,139 @@
+.card-container {
+  width: 90vh;
+  height: 90vh;
+  background: #7ec2e7;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-circle {
+  background: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 28px;
+  padding: 5px;
+
+}
+.title {
+  color: black;
+  margin: 0;
+}
+.bloc {
+  margin-left: 28px;
+}
+
+.task-count {
+  margin-top: 7px;
+  margin-left: 31px;
+  color: black;
+}
+
+.task-card {
+  width: 80%;
+  height: 520px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 5px 5px 10px rgba(99, 99, 99, 0.28);
+  background: white;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+
+.list-group {
+  height: 75%;
+  color: black;
+  padding: 20px 40px;
+  font-size: 18px;
+  overflow: scroll;
+}
+
+.list-group::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.list-group::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.list-group::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(164, 164, 164);  /* creates padding around scroll thumb */
+}
+
+.add-task-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.new-task , .btn-primary {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid #9acffd;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: rgb(0, 158, 0);
+  color: white;
+}
+
+.task-done {
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l11 2s infinite;
+}
+@keyframes l11 {
+  0%   {background: conic-gradient(#3391f0 0     ,#0000 0)}
+  12.5%{background: conic-gradient(#3391f0 45deg ,#0000 46deg)}
+  25%  {background: conic-gradient(#3391f0 90deg ,#0000 91deg)}
+  37.5%{background: conic-gradient(#3391f0 135deg,#0000 136deg)}
+  50%  {background: conic-gradient(#3391f0 180deg,#0000 181deg)}
+  62.5%{background: conic-gradient(#3391f0 225deg,#0000 226deg)}
+  75%  {background: conic-gradient(#3391f0 270deg,#0000 271deg)}
+  87.5%{background: conic-gradient(#3391f0 315deg,#0000 316deg)}
+  100% {background: conic-gradient(#3391f0 360deg,#0000 360deg)}
+}
+
+.task-container {
+  padding: 5px;
+  margin:10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid grey; */
+  box-shadow: 2px 2px 7px rgb(233, 233, 233);
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: rgb(181, 2, 2);
+  cursor: pointer;
+}
